@@ -1,0 +1,22 @@
+body {
+  font-family: Roboto;
+}
+
+#input {
+  width: 500px;
+  height: 200px;
+}
+
+#cipher {
+  margin-top: 2em;
+}
+
+#result {
+  margin-top: 2em;
+  font-size: 200%;
+}
+
+.space {
+  display: inline-block;
+  width: 1em;
+}

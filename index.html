@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Code / Decode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <link rel="stylesheet" type="text/css" href="print.css" media="print" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class='noprint'>
+        <h1 class="title">
+          Secret
+        </h1>
+        <div>
+          <textarea id='input'></textarea>
+        </div>
+        <div><a href='#' id='shuffle'>🔄changement du code</a></div>
+      </div>
+      <div id='cipher'>
+        <table class='cipher table is-bordered is-fullwidth is-narrow'>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div id='result'>
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>
