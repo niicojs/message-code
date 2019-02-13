@@ -1,6 +1,7 @@
 const update = () => {
-  let text = $('#input').val().toUpperCase();
-  text = text.replace('É', 'E');
+  let text = $('#input')
+    .val()
+    .toUpperCase();
   let encrypted = '';
   const min = 'A'.charCodeAt(0);
   const max = 'Z'.charCodeAt(0);
@@ -9,8 +10,9 @@ const update = () => {
     if (text[i] === ' ') {
       encrypted += `<span class='space' />`;
     } else if (letter >= min && letter <= max) {
-      // console.log(`${text[i]} - ${letter} - ${letter - min} - ${cipher[letter - min]}`);
       encrypted += cipher[letter - min];
+    } else if (text[i] === 'É') {
+      encrypted += '☁️';
     } else {
       encrypted += text[i];
     }
@@ -60,10 +62,12 @@ const displayCipher = () => {
   for (let i = 0; i < cipher.length; i++) {
     content += `<td>${cipher[i]}</td>`;
   }
+  content += `<td>☁️</td>`;
   content += '</tr><tr>';
   for (let i = 0; i < cipher.length; i++) {
     content += `<td>${String.fromCharCode('A'.charCodeAt(0) + i)}</td>`;
   }
+  content += `<td>É</td>`;
   content += '</tr>';
   $('.cipher tbody').append(content);
 };
